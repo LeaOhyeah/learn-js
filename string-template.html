@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const firstName = "Lea";
+      const middleName = "Alyu";
+      const lastName = "Maulana";
+
+      const string = "Name: " + firstName + " " + middleName + " " + lastName;
+      const template = `Name: ${firstName} ${middleName} ${lastName}`;
+
+      document.writeln(string);
+      document.writeln("<br>");
+      document.writeln(template);
+      document.writeln("<br>");
+
+      console.log(name);
+      console.log(template);
+
+      const point = 100;
+      const result = `${firstName} mendapat poin ${
+        point + 100
+      } dan dinyatakan ${point >= 100 ? "lulus" : "tidak lulus"}`;
+      document.writeln(result);
+      document.writeln("<br>");
+
+      const multiline = `Nama saya Lea
+      Sekarang saya di kereta
+      Sambil coding`;
+      document.writeln(multiline);
+    </script>
+  </body>
+</html>

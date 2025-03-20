@@ -1,0 +1,259 @@
+#==== Program Hello World ====# 
+Cara membuat kode
+lewat html langsung, hello-world.html
+lewat import dengan tag source dan atribut src, hello-world-file.html
+
+
+#==== Komentar ====#
+adalah kode program yang tidak akan dieksekusi, hello-world.html
+
+
+#==== Tipe Data Number ====#
+js hanya mendukung satu tipe data number yaitu number
+bilangan bulat dan pecahan adalah number
+number notation di js default nya desimal (basis 10), selain itu
+hexadecimal 0x(angak hexadecimal)
+binary 0b(angka biner)
+octal 0o(angka oktal)
+
+
+#==== Tipe Data Boolean ====#
+tipe data kebenaran, hanya bernilai true atau false
+
+
+#==== Tipe Data String ====#
+tipe data text, dibuat dengan diapit petik satu atau ganda
+"data" atau 'data'
+
+menggabungkan string, dengan + (concating)
+"nama depan" + "nama tengah" + "nama belakang"
+
+escape squence, karakter khusus seperti
+enter (\n), tab (\t), petik satu atau ganda, backslash dll
+praktik dengan textarea agar enter terlihat
+
+#==== Variable ====#
+tempat untuk menyimpan data, sebenarnya hanya menyimpan lokasi data di memory
+data dapat digunakan lagi
+sebelum tahun 2015 membuat variable dengan keyword var
+setelahnya diperkenalkan let dan const (untuk constanta), karena terdapat masalah dengan var
+jika dirubah maka error
+jika terdapat error kode dibawahnya tidak akan dieksekusi
+
+#==== Operator Matematika ====#
+banyak operator Matematika yang didukung seperti: aritmatika, argumented assignments, unary, dll
+
+
+#==== Operator Perbandingan ====#
+oprasi untuk membandingkan dua buah data dan menghasilkan nilai Boolean
+jika hasil oprasinya benar maka menghasilkan true
+jika salah maka false
+
+
+#==== Operator Logika ====#
+ini adalah operator untuk dua data Boolean,
+logika dasar seperti and, or, xor
+contoh true and false menghasilkan false
+
+
+#==== Console ====#
+js memiliki fitur untuk logging, dengan mencetak di Console
+untuk melakukan ini dengan console dan Method-method nya
+berikut urutan level nya
+console.debug (untuk debug)
+console.log / info (untuk info)
+console.table (mencetak table)
+console.warn (warning)
+console.error (error)
+
+secara default yang tampil hanya level log dan setelahnya (debug tidak muncul)
+untuk memunculkan nya ubah level di console
+
+
+#==== String Template ====#
+menggunakan operator + untuk concating string yang banyak sangatlah berbelit-berbelit
+dengan string template kita bisa mensubtitusi data dari luar string tanpa keluar dari string
+atau bahkan melakukan oprasi Matematika
+untuk menggunakan string template dengan backtic `data`
+selain itu ini juga bisa untuk multiline string (bermasalah)
+
+
+#==== Konversi String dan Number ====#
+2:00
+
+
+#==== Tipe Data Array ====#
+
+
+
+#==== Tipe Data Object ====#
+
+
+
+#==== If Expression ====#
+
+
+
+#==== Popup ====#
+
+
+
+#==== Undefined ====#
+
+
+
+#==== Null ====#
+
+
+
+#==== Switch Expression ====#
+
+
+
+#==== Operator typeof ====#
+
+
+
+#==== Operator in ====#
+
+
+
+#==== Ternary Operator ====#
+
+
+
+#==== Nullish Coalescing Operator ====#
+
+
+
+#==== Optional Chaining ====#
+
+
+
+#==== Falsy dan Truthy ====#
+
+
+
+#==== Operator Logika di Non Boolean ====#
+
+
+
+#==== For Loop ====#
+
+
+
+#==== While Loop ====#
+
+
+
+#==== Do While Loop ====#
+
+
+
+#==== Break dan Continue ====#
+
+
+
+#==== Label ====#
+
+
+
+#==== For In ====#
+
+
+
+#==== For Of ====#
+
+
+
+#==== With Statement ====#
+
+
+
+#==== Function ====#
+
+
+
+#==== Function Parameter ====#
+
+
+
+#==== Function Return Value ====#
+
+
+
+#==== Optional Parameter ====#
+
+
+
+#==== Default Parameter ====#
+
+
+
+#==== Rest Parameter ====#
+
+
+
+#==== Function Sebagai Value ====#
+
+
+
+#==== Anonymous Function ====#
+
+
+
+#==== Function dalam Function ====#
+
+
+
+#==== Scope ====#
+
+
+
+#==== Recursive Function ====#
+
+
+
+#==== Function GEnerator ====#
+
+
+
+#==== Arrow Function ====#
+
+
+
+#==== Closure ====#
+
+
+
+#==== Object Method ====#
+
+
+
+#==== Kata Kunci this ====#
+
+
+
+#==== Arrow Function di Object ====#
+
+
+
+#==== Getter dan Setter ====#
+
+
+
+#==== Masalah Variable var ====#
+
+
+
+#==== Destructuring ====#
+
+
+
+#==== Strict Mode ====#
+
+
+
+#==== Debugger ====#
+
+

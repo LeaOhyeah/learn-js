@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    const orang = {
+        "nama lengkap" : "Lea Alyu",
+        alamat: "Denpasar",
+        umur: 20
+    };
+
+    // ubah property / attribute
+    // person["nama"] = "Lea Alyu";
+    // person["alamat"] = "Denpasar";
+    // person["umur"] = 20;
+
+    console.info(`Nama : ${orang["nama lengkap"]}`);
+    console.info(`Alamat : ${orang.alamat}`);
+    console.info(`Umur : ${orang.umur}`);
+
+    console.table(orang);
+
+    delete orang["umur"];
+
+    console.table(orang);
+
+</script>
+</body>
+</html>

@@ -79,15 +79,32 @@ selain itu ini juga bisa untuk multiline string (bermasalah)
 
 
 #==== Konversi String dan Number ====#
-2:00
+parseInt atau parseFloat mentolelir kesalahan di belakang
+    parseInt("1salah") => 1
+Number tidak mentolelir kesalahan apapun
+    Number("1salah") => NaN
+
+float dibulatkan ke bawah jika menjadi parseInt
+NaN ada singaktan dari Not a Number atau angka unik yang menyatakan ini bukan angka
+NaN akibat kesalahan parsing atau oprasi dengan NaN
 
 
 #==== Tipe Data Array ====#
-
+kumpulan tipe data, di JS ini dinamis (ukuran bisa bertambah) dan tipe bebas
+menambah di akhir dengan push()
+mengambil spesifik dengan index, data[0]
+menghapus dengan delete data[0], tidak menggeser (index juga akan hilang bersama data)
+namun array length tetap sama meskipun di delete (kelak index bisa di buat lagi)
 
 
 #==== Tipe Data Object ====#
-
+di bahasa lain index bisa menggunakan tipe selain number (array asosiatif php), namun di js tidak bisa
+jika array diberikan index selain number, maka di ubah menjadi objek
+ini berbahaya karena oprasi array dan objek berbeda
+objek mirip array tapi index nya juga bisa string
+const objek {
+    attribute: property
+}   
 
 
 #==== If Expression ====#

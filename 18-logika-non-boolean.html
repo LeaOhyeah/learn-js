@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // dari kiri ambil yang true atau terakhir
+      console.log("Hello" || ""); // hello, true yang diambil
+      console.log("" || []); // [], true yang diambil
+      console.log(0 || false); // false, keduanya false, diambil yang terakhir
+      console.log("Hello" || "Hai"); // hello, keduanya true, diambil yang pertama
+      // jika sama-sama true, diambil yang pertama
+
+      // dari kiri ambil yang false atau terakhir
+      console.log("Hello" && ""); // "", false yang diambil
+      console.log("" && []); // "", false yang diambil
+      console.log(0 && false); // false, keduanya false, diambil yang pertama
+      console.log("Hello" && "Hai"); // hello, keduanya true, diambil yang terakhir
+    </script>
+  </body>
+</html>

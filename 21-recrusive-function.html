@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recrusive Function</title>
+  </head>
+  <body>
+    <script>
+      function factorial(value) {
+        let result = 1;
+        for (let index = 1; index <= value; index++) {
+          console.log(`${result} * ${index}`);
+          result *= index;
+          console.log(`log ${result}`);
+        }
+        return result;
+      }
+
+      console.log(factorial(5));
+      
+      function factorialRecrusive(val) {
+          if (val == 1) {
+              return 1;
+            } else {
+                console.log(`${val} * fun(${val - 1})`);
+                return val * factorialRecrusive(val - 1);
+            }
+        }
+
+        console.log(factorialRecrusive(5));
+    </script>
+  </body>
+</html>

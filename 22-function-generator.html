@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      function* generateNames() {
+        yield "Lea";
+        yield "Alyu";
+        yield "Maulana";
+      }
+      const names = generateNames();
+      for (const name of names) {
+        console.log(name);
+      }
+
+      function* buatGanjil(limit) {
+        for (let index = 0; index <= limit; index++) {
+          if (index % 2 == 1) {
+            console.log(`buat lazy ${index}`);
+            yield index;
+          }
+        }
+      }
+
+      for (const data of buatGanjil(6)) {
+        console.log(data);
+      }
+
+      function buatGanjilArray(limit) {
+        const result = [];
+        for (let index = 0; index <= limit; index++) {
+          if (index % 2 == 1) {
+            console.log(`buat eager ${index}`);
+            result.push(index);
+          }
+        }
+        return result;
+      }
+
+      for (const data of buatGanjilArray(6)) {
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>

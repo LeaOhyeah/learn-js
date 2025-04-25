@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For in</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Lea",
+        middleName: "Alyu",
+        lastName: "Maulana",
+      };
+      for (const key in person) {
+        console.log(key); // firstName, middleName, lastName yang muncul
+        console.log(person[key]); // Lea, Alyu, Maulana yang muncul
+      }
+    </script>
+  </body>
+</html>

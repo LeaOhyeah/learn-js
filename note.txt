@@ -167,84 +167,182 @@ nilai string kosong bukan nullish
 
 
 #==== Optional Chaining ====#
-
-
+mirip dengan ternary, namun berbeda cara penggunaan nya,
+digunakan untuk mengamankan ketika mengakses property dari data nullish (agar tidak terjadi error)
 
 
 #==== Falsy dan Truthy ====#
-
+falsy kadang ditulis falsey, tipe data lain berubah menjadi boolean false
+truthy, tipe data lain yang berubah menjadi boolean true
+false: number 0 & -0, string kosong, null, undefined, NaN
+true: selain false, array kosong dan objek kosong termasuk true
+ini bisa digunakan di perulangan, percabangan, dan tempat-tempat yang seharusnya membutuhkan boolean
 
 
 #==== Operator Logika di Non Boolean ====#
-
+|| dari kiri ambil yang true atau terakhir
+&& dari kiri ambil yang false atau terakhir
 
 
 #==== For Loop ====#
+for (init, kondisi, post){
+    body
+}
+init: sekali di awal
+kondisi: dicek jika true body dan post berjalan
+body: yang dijalankan
+post: setelah body
+ketiganya tidak wajib di isi, default kondisi true
+for (;;){
 
+}
 
 
 #==== While Loop ====#
-
+seperti for, tapi hanya ada kondisi
+while(kondisi){
+    body
+}
 
 
 #==== Do While Loop ====#
-
+seperti while, tapi body dijalankan sebelum kondisi
+do{
+    body
+} while()
+body, kondisi (jika true kembali ke body)
 
 
 #==== Break dan Continue ====#
-
+break, menghentikan seluruh perulangan
+continue, menghentikan perulangan saat ini, lanjut ke perulangan berikutnya
+continue menghentikan body, post statement tetap berjalan
 
 
 #==== Label ====#
-
+penanda untuk break dan continue digunakan
 
 
 #==== For In ====#
-
+digunakan untuk mengiterasi seluruh property di objek
+atau index array (tidak di rekomendasikan, sudah jelas 0 sampai length-1)
+nama property, bukan value nya
 
 
 #==== For Of ====#
-
+seperti for in tapi tidak bisa untuk objek, dan menghasilkan value nya bukan index nya
+karena objek bukan data iterable, ini hanya untuk data iterable seperti array dan string
 
 
 #==== With Statement ====#
+tidak direkomendasikan di versi baru
+memanggil objek tanpa menulis objek berkali-kali
+const person = {
+    name: "Lea",
+    age: 20
+}
 
+const name = "Bukan Lea"
+with(person){
+    console.log(name); // ini hanya bisa Lea
+}
 
 
 #==== Function ====#
-
-
+function foo(){
+    body
+}
+foo()
 
 #==== Function Parameter ====#
-
+function foo(data1, data2){
+    body
+}
+foo(argForData1, argForData2)
 
 
 #==== Function Return Value ====#
-
+function foo(data1, data2){
+    const hasil = data1 + data2
+    return hasil
+}
+const result = foo(1, 2)
+hanya booleh 1 data yang di return (satu array banyak index termasuk satu data)
 
 
 #==== Optional Parameter ====#
-
+secara default, parameter di js itu opsional (tidak wajib mengirim argumen)
+jika tidak dikirim argumen maka undefined
+anda bisa membuat function dengan 3 parameter dan hanya mengirim 2, 
+atau bahkan mengirim 4 tanpa terjadi error
 
 
 #==== Default Parameter ====#
-
+digunakan ketika argumen tidak dikirim ke parameter
+atau argumen yang dikirim adalah undefined
+function foo(name = "default"){
+    console.log(name)
+}
+foo() // menghasilkan default
 
 
 #==== Rest Parameter ====#
+mengirim data sebanyak-banyaknya di parameter dan dikonversi menjadi array
+harus param terakhir
+function foo(name, ..restParam){
 
+}
+foo("lea", 1, 2, 3, 4, 5) // sebanyak-banyaknya akan masuk di rest parameter
+sebelumnya ada arguments object, mengambil semua argument yang dikirim
+function foo(){
+    arguments // ini sebuah objek yang isinya seluruh argumen yang dikirim
+}
 
 
 #==== Function Sebagai Value ====#
+function juga bisa sebagai value, disimpan di variable
+bisa dikirim ke function lain, digunakan sebagai value, seperti variable
+function foo(name){
+    console.log(name)
+}
+foo("lea") // result lea
+const bar = foo // function sebagai value
+bar("lia") // result lia
 
+contoh lain, dikirim ke function lain
+function giveMeName(callback){
+    callback("lio")
+}
+giveMeName(say) // sama seperti mengirim function say ke callback dan argumen nya lio
+giveMeName(foo) // sama seperti mengirim function foo ke callback dan argumen nya lio
 
 
 #==== Anonymous Function ====#
+function tanpa nama, dibuat di dalam sebuah variable atau dibuat dalam argumen yang di kirim
+let say = function (name){
+    console.log(name)
+} // tidak memiliki nama, say adalah variable bukan nama function itu sendiri
 
+contoh lain, Anonymous dikirim ke function lain
+function giveMeName(callback){
+    callback("lio")
+}
+giveMeName(function (name){
+    console.log(name) // result lio, ini seperti routing sederhana laravel
+})
 
 
 #==== Function dalam Function ====#
+tidak ada batasan dimana boleh membuat function
+bahkan bisa di dalam function, function yang didalam function kita sebut inner function
+inner function hanya bisa diakses di tempat kita membuatnya
+function outer(){
+    function inner(){}
 
+    inner()
+}
+outer()
+inner() // error
 
 
 #==== Scope ====#
@@ -301,3 +399,4 @@ nilai string kosong bukan nullish
 
 
 security & security hotsopts
+GIT_COMMITTER_DATE="2025-04-23 17:29:00" git commit --amend --date="2025-04-23 17:29:00"

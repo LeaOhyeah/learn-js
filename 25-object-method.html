@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method</title>
+  </head>
+  <body>
+    <script>
+      function sayHello2(name) {
+        console.log(`Hello 2 ${name} I'm Lea`);
+      }
+
+      const person = {
+        name: "Lea",
+        sayHello: function (name) {
+          console.log(`Hello ${name} I'm Lea`);
+        },
+        sayHello2: sayHello2,
+      };
+
+      person.sayHello3 = function (name) {
+        console.log(`Hello3 ${name} I'm Lea`);
+      };
+    </script>
+  </body>
+</html>

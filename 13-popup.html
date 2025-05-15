@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup</title>
+  </head>
+  <body>
+    <script>
+      alert("Hai"); // tidak muncul di ekstensi
+
+      const name = prompt("Siapa nama anda?");
+      alert(`nama anda adalah ${name}`); // tidak muncul di ekstensi
+
+      const masuk = confirm("Yakin masuk?");
+      if (masuk) {
+        alert(`Selamat datang ${name}`); // tidak muncul di ekstensi
+      } else {
+        alert(`Selamat tinggal ${name}`); // tidak muncul di ekstensi
+      }
+    </script>
+  </body>
+</html>

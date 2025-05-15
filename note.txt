@@ -82,7 +82,7 @@ selain itu ini juga bisa untuk multiline string (bermasalah)
 parseInt atau parseFloat mentolelir kesalahan di belakang
     parseInt("1salah") => 1
 Number tidak mentolelir kesalahan apapun
-    Number("1salah") => NaN
+    Numconditionber("1salah") => NaN
 
 float dibulatkan ke bawah jika menjadi parseInt
 NaN ada singaktan dari Not a Number atau angka unik yang menyatakan ini bukan angka
@@ -108,42 +108,66 @@ const objek {
 
 
 #==== If Expression ====#
+salah satu kata kunci percabangan
 
 
 
 #==== Popup ====#
-
+js memiliki fitur bernama alert, prompt dan confirm
+digunakan untuk memberi peringatan berupa popup di browser
+alert memberi peringatan
+prompt meminta input string
+confirm meminta input boolean
 
 
 #==== Undefined ====#
-
+adalah kata kunci, sebuah tipe data yang belum terdefinisikan
+seperti variable yang belum ditambahkan nilai
+array yang tidak ada di index
+objek yang property nya tidak ada
 
 
 #==== Null ====#
-
+null adalah data yang kosong, sudah didefinisikan tapi kosong
+itu adalah sebuah tempat kosong di memory yang selamanya kosong
 
 
 #==== Switch Expression ====#
-
+percabangan yang lebih sederhana
+hanya untuk ==
+hanya untuk satu variable / data
 
 
 #==== Operator typeof ====#
-
+operator untuk mengetahui tipe data sebuah value atau variable
+typeof a // me return string tipe data dari a
 
 
 #==== Operator in ====#
-
+operator untuk mengecek sebuah property ada di objek atau tidak
+bisa juga sebuah index ada di array atau tidak
+me return boolean, true jika ada
+"a" in namaObjek
+0 in namaArray
+walapun tipe datanya null atau undefined akan tetap mengembalikan true
+lebih tepatnya didefinisikan sebagai null / undefined
 
 
 #==== Ternary Operator ====#
-
+operator sederhana dari if statement
+mengambil nilai kiri jika benar, kanan jika salah
+boolean ? nilaikiri : nilaikanan
 
 
 #==== Nullish Coalescing Operator ====#
-
+nullish value adalah null dan undefined
+nullish coalescing operator ?? mirip dengan Ternary
+true jika mendapatkan nullish value
+nilai string kosong bukan nullish
 
 
 #==== Optional Chaining ====#
+
 
 
 
@@ -274,3 +298,6 @@ const objek {
 #==== Debugger ====#
 
 
+
+
+security & security hotsopts

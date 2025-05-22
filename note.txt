@@ -346,31 +346,61 @@ inner() // error
 
 
 #==== Scope ====#
-
+area akses sebuah data, ada 2 jenis scope di js
+global scope, local scope
+setiap membuat function, maka kita membuat local scope untuk function tersebut
+data global scope bisa diakses dari loacal, namun data local hanya bisa diakses di scope nya sendiri
+let dataGlobal = 'data'
+function foo(){
+    dataGlobal // tidak error
+    let dataLocalFoo = 'foo'
+}
+dataLocalFoo // error, hanya bisa diakses di foo dalam foo
 
 
 #==== Recursive Function ====#
+kemampuan function memanggil dirinya sendiri
 
 
-
-#==== Function GEnerator ====#
-
+#==== Function Generator ====#
+function yang digunakan untuk membuat data generator
+generator adalah data yang bisa di iterasi (seperti array) / data iterator
+untuk membuat function generator dengan tanda * setelah kata function
+mengembalikan data dengan keyword yeild 
+data hanya bisa di iterasi, tidak bisa di ubah
+ini bersifat lazy, jika data tidak diambil, maka data selanjutnya tidak di eksekusi
 
 
 #==== Arrow Function ====#
-
+alternatif pembuatan function yang lebih sederhana,
+dengan simbol arrow =>, namun punya beberapa kekurangan
+- tidak bisa menggunakan arguments object
+- tidak bisa menggunakan function generator
+- tidak bisa mengakses this dan super
+- harus dibuat di dalam variable atau sebagai argumen yang dikirim
 
 
 #==== Closure ====#
-
+adalah kombinasi function dan bundel referensi ke data disekitarnya.
+kita bisa membuat sebuah function di local scope dan referensi ke data di sekitar local scope tersebut, 
+keluar scope nya
 
 
 #==== Object Method ====#
-
+kita sudah membahas tentang property di object
+sebenarnya function juga merupakan salah satu tipe data,
+jadi function pun sebenarnya bisa ditambahkan sebagai property di object
+function di object kadang disebut juga sebagai Object Method
 
 
 #==== Kata Kunci this ====#
-
+adalah referensi ke object milik siapa
+tiap lokasi kata kunci this, bisa berbeda-beda referensi pemilik nya
+dalam Object Method, this merupakan referensi ke object pemilik function nya
+di global scope, this merupakan referensi ke global object (di browser biasanya Window)
+dalam function, this merupakan referensi ke global object (di browser biasanya Window)
+di function dengan strict mode (akan dibahas nanti), this adalah undefined
+dalam event, this merupakan referensi ke element yang menerima event (dibahas di materi Document Object Model)
 
 
 #==== Arrow Function di Object ====#
@@ -398,5 +428,5 @@ inner() // error
 
 
 
-security & security hotsopts
-GIT_COMMITTER_DATE="2025-04-23 17:29:00" git commit --amend --date="2025-04-23 17:29:00"
+
+

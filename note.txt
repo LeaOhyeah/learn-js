@@ -404,10 +404,17 @@ dalam event, this merupakan referensi ke element yang menerima event (dibahas di
 
 
 #==== Arrow Function di Object ====#
+this di sini mengacu ke Window, 
+tidak bisa menggunakan fitur seperti yang dijelaskan di arrow function
 
 
 
 #==== Getter dan Setter ====#
+Getter dan Setter adalah kemampuan membuat function yang berbeda untuk 
+mengambil data (Getter)
+mengubah data (Setter) pada sebuah property di Object
+Dengan menggunakan Getter dan Setter, kita bisa melakukan hal apapun dalam function
+sebelum sebuah property di akses atau diubah, misal menambah validasi dan lain-lain
 
 
 

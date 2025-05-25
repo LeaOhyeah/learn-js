@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      {
+        const names = ["Lea", "Alyu", "Maulana", "Lia", "Lio"];
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others); // ['lia', 'lio']
+      }
+
+      {
+        const person = {
+          firstName: "Lea",
+          lastName: "Maulana",
+          address: {
+            street: "Jalan Raya",
+            city: "Denpasar",
+            country: "Indonesia",
+          },
+          hobby: "Makan",
+          channel: "tirto.id",
+        };
+
+        let {
+          firstName,
+          lastName,
+          //   address, // sebuah ojek lagi
+          address: { city, street, country }, // address tidak bisa diakses, yang diakses yang didalamnya
+          ...others
+        } = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+      }
+
+      // distructuring di parameter
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Lea",
+          middleName: "Alyu",
+          lastName: "Maulana",
+        };
+
+        displayPerson(person);
+      }
+
+      // default value
+      {
+        const names = ["Lea", "Lia", "Lio"];
+        const [firstName, middleName = "Lia", lastName = "Lio"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // menggunakan nama variable lain di objek
+      {
+        const person = {
+          firstName: "Lea",
+          middleName: "Alyu",
+          lastName: "Maulana",
+        };
+
+        let {
+          firstName: namaDepan,
+          middleName: namaTengah = "Alyu",
+          lastName: namaBelakang,
+        } = person;
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>

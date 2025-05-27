@@ -436,11 +436,15 @@ ini mempermudah ketika ingin mengambil data dari array atau object tanpa harus m
 
 
 #==== Strict Mode ====#
-
+secara default kode program kita berjalan dalam mode tidak strict, atau istilahnya sloppy mode
+ketika strict mode dijalankan, maka akan merubah beberapa cara kerja di JavaScript, seperti :
+Merubah beberapa JavaScript error dari yang tadinya silent error, menjadi throw error (terlihat)
+Memperbaiki beberapa kesalahan engine JavaScript untuk optimisasi
+Menolak beberapa kode perintah yang kedepannya akan digunakan di ECMAScript
 
 
 #==== Debugger ====#
-
+// belum dikuasai
 
 
 
